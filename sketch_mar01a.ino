@@ -9,32 +9,32 @@ void setup() {
 }
 
 void loop() {
-  //make blue up to LED#22 with the leading one being White.
-for (int n = 22; n<NUM_LEDS;n+= 22){
+
+for (int n = 135; n<NUM_LEDS;n+= 135){
   for(int i=0; i < n; i++){
-    leds[i] = CRGB::Pink;
+    leds[i] = CRGB::Blue;
     FastLED.show();
-    delay(30);
-    leds[i] = CRGB::Orange;
+    delay(10);
+    leds[i] = CRGB::Red;
   }
   for(int i=0;i<n;i++){
-    leds[n-i] = CRGB::Pink;
+    leds[n-i] = CRGB::Blue;
     FastLED.show();
-    delay(30);
+    delay(10);
     leds[n-i] = CRGB::Black;
   }
   for(int i=0;i<n;i++){
-    leds[n-i] = CRGB::Pink;
+    leds[n-i] = CRGB::Blue;
     FastLED.show();
     delay(10);
     leds[n-1] = CRGB::Black;
   }
     for(int dot = 0; dot < NUM_LEDS; dot++) {
-    leds[dot] = CRGB::Pink;
+    leds[dot] = CRGB::Blue;
     FastLED.show();
 
     leds[dot] = CRGB::Black;
-    delay(5000) ;
+    delay(500) ;
     }
   }
 }
